@@ -9,6 +9,7 @@ git config --global user.email "okcee@hotmail.com"
 git config --global user.name "okcee" 
 git status -s	ver el estado en el que se encuentran nuestros archivos
 git commit -m "descripcion"
+git checkout main
 git log --oneline	listado de todas las copias que tenemos en el repositorio
 git reset --hard	restaurar el archivo a la versión anterior
 git reset --hard 093f1c5	apuntar a un archivo en concreto
@@ -72,6 +73,7 @@ Busca la sección de "Settings" o "Configuración".
 Busca la sección de "Branches" o "Ramas".
 Cambia la rama predeterminada a main.
 Actualizar las referencias remotas:
+git pull origin main --allow-unrelated-histories  -  Para forzar la combinación de los historiales no relacionados
 Una vez que hayas cambiado la rama predeterminada de forma remota, puedes eliminar la rama master remota, una vez que no la necesites más.
 git push origin --delete master
 Actualizar referencias locales:
