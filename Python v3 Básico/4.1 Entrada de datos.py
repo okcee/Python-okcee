@@ -35,7 +35,9 @@ print("Tupla final")
 print(T)
 
 #Ejercicios para Practicar
+
 # 1) Escribe un programa que pida al usuario una lista de nombres y luego imprima la lista en orden alfabético.
+
 nombres = []
 while True:
     nombre = input("Introduce un nombre (o escribe 'fin' para terminar): ")
@@ -61,3 +63,15 @@ pares = {numero for numero in numeros if numero % 2 == 0}
 print("Números pares en el conjunto:", pares)
 
 # 3) Escribe un programa que pida al usuario una tupla de coordenadas (x, y) y luego calcule la distancia al origen (0, 0).
+
+import math
+try:
+    entrada = input("Introduce las coordenadas (x, y) separadas por comas: ")
+    coordenadas = tuple(map(float, entrada.split(',')))
+    if len(coordenadas) != 2:
+        raise ValueError
+    x, y = coordenadas
+    distancia = math.sqrt(x**2 + y**2)
+    print("Distancia al origen:", distancia)
+except ValueError:
+    print("Entrada inválida. Introduce dos números separados por comas.")
