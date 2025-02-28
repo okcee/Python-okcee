@@ -111,32 +111,41 @@ def log(*args):
 log(1,2,3)
 '''
 2 - Permitir que el usuario especifique un prefijo:
-Este paso requiere que añadas un parámetro adicional a la función, posiblemente llamado prefix, para que el usuario pueda cambiar el texto que precede a los argumentos.
+Este paso requiere que añadas un parámetro adicional a la función, llamado prefix, para que el usuario pueda cambiar el texto que precede a los argumentos.
 '''
 def log(*args, prefix='LOG:'):
     print(prefix, *args)
-    log(1, 2, 3, prefix='AVISO:')
+log(1, 2, 3, prefix='AVISO:')
 '''
 3 - Establecer un valor por defecto para el prefijo:
 Aquí introduces un valor predeterminado para el parámetro prefix (por ejemplo, 'LOG: '), para que el usuario no tenga que especificarlo siempre.
 '''
-
+def log(*args, prefix='LOG:'):
+    print(prefix, *args)
+log(1, 2, 3)
 '''
 4 - Permitir que el usuario establezca un prefijo y un separador usando parámetros nombrados:
-Aquí se añade otro parámetro, sep, que determinará cómo se separan los argumentos impresos. Además, es importante que ambos (sep y prefix) solo puedan pasarse como parámetros nombrados (keyword arguments), no posicionales. Esto se logra mediante su colocación en la definición de la función.
+Aquí se añade otro parámetro, "sep", que determinará cómo se separan los argumentos impresos. Además, es importante que ambos (sep y prefix) solo puedan pasarse como parámetros nombrados (keyword arguments), no posicionales. Esto se logra mediante su colocación en la definición de la función.
 '''
-
+def log(*args, sep=' ', prefix='LOG:'):
+    print(prefix, *args, sep=sep)
+log(1, 2, 3, sep=', ', prefix='INFO:')
 '''
 5 - Establecer valores por defecto para el prefijo y el separador:
 Este paso refuerza la flexibilidad de la función al darle valores predeterminados tanto a sep como a prefix.
 '''
-
+def log(*args, sep=' ', prefix='LOG:'):
+    print(prefix, *args, sep=sep)
+log(1, 2, 3, 4)
 '''
 6 - Adaptar la función para aceptar un diccionario mediante la sintaxis **:
 Finalmente, se te pide que hagas la función capaz de tomar un diccionario con los valores para prefix y sep. Esto implica desempaquetar el diccionario utilizando la sintaxis **kwargs.
 '''
-
-
+def log(*args, sep=' ', prefix='LOG:'):
+    print(prefix, *args, sep=sep)
+    
+configuracion = {'sep': ' | ', 'prefix': 'DEBUG:'}
+log(1, 2, 3, **configuracion)
 '''Cada modificación introduce o refuerza conceptos importantes de Python como:
 *args y **kwargs para manejar argumentos flexibles.
 Los parámetros con nombres y valores predeterminados para mejorar la usabilidad.
