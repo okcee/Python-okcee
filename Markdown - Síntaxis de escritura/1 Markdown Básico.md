@@ -121,15 +121,15 @@ This is a second line.
 # Alertas
 Las alertas son una extensión Markdown basada en la sintaxis blockquote que puede utilizar para resaltar la información crítica. En GitHub, se muestran con colores e iconos distintivos para indicar la importancia del contenido.Deben usarse las alertas solo cuando sean cruciales para el éxito del usuario y limitarlas a una o dos por artículo para evitar sobrecargar al lector
 > [!NOTE]
-> Useful information that users should know, even when skimming content.
+> Useful information that users should know, even when skimming content.  
 > [!TIP]
-> Helpful advice for doing things better or more easily.
+> Helpful advice for doing things better or more easily.  
 > [!IMPORTANT]
-> Key information users need to know to achieve their goal.
+> Key information users need to know to achieve their goal.  
 > [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
+> Urgent info that needs immediate user attention to avoid problems.  
 > [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
+> Advises about risks or negative outcomes of certain actions.  
 
 # Ocultar el contenido con comentarios
 Puedes indicarle a GitHub que oculte el contenido del Markdown representado si colocas el contenido en un comentario HTML.
