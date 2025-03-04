@@ -1,6 +1,9 @@
 Tutoriales, ejemplos y referencias
 https://www.w3schools.com/python/default.asp
 
+Cheatograpy - Referencias rápidas (https://cheatography.com/)
+https://cheatography.com/torerohk/cheat-sheets/python-3-espanol/
+
 Udemy -> Curso gratis de Visual Studio Code: Mejora tu velocidad para codificar -> Fernando Herrera
 https://www.udemy.com/share/101smO3@31Z7e526dI8HEfCohGmxd3rTY5cj7oCqrP20gDNprZ5cJOL-p502d-HG4iKR4qCnuA==/
 
