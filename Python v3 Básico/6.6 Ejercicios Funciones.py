@@ -84,7 +84,11 @@ holaConNombre("Angel") # llamada a la función, 'Hola Angel!' se muestra en la c
 def imprimir(precio, iva = 1.21):
     print(precio * iva)
 imprimir(300, 1.08)
-# Funciones con argumentos variables
+'''
+Funciones con argumentos variables
+¿Qué son los argumentos variables?
+En Python, puedes definir funciones que acepten un número variable de argumentos. Esto es útil cuando no sabes cuántos argumentos se pasarán a la función de antemano. Para lograr esto, se utiliza el operador * antes del nombre del parámetro en la definición de la función.
+'''
 # Me crea una tupla de nombre "otros"
 def varios(param1, param2, *otros):
     for val in otros:
@@ -104,127 +108,109 @@ def varios(param1, param2, **otros):
 varios(1, 2, tercero = 3)
 # ---------------------------
 #---------------------------------------
-#ARGUMENTOS VARIABLES EN FUNCIONES. EL
-ARGUMENTO CON * SERÁ UNA TUPLA
+#ARGUMENTOS VARIABLES EN FUNCIONES. EL ARGUMENTO CON * SERÁ UNA TUPLA
 # PYTHON NO TIENE SOBRECARGA DE FUNCIONES
 #---------------------------------------
 def listarNombres(*nombres):
-for nombre in nombres:
-print(nombre)
-listarNombres('Juan', 'Karla', 'María',
-'Ernesto')
+    for nombre in nombres:
+        print(nombre)
+listarNombres('Juan', 'Karla', 'María', 'Ernesto')
 listarNombres('Laura', 'Carlos')
 #---------------------------------------
-# hACER LO MISMO PERO PASANDO
-DICCIONARIOS COMO ARGUMENTOS. KWARGS
+
+# hACER LO MISMO PERO PASANDO DICCIONARIOS COMO ARGUMENTOS. KWARGS
 def listarTerminos(**KWARGS):
-for clave, valor in KWARGS.items():
-print(f'{clave}: {valor}')
-listarTerminos(IDE='Integrated
-Developement Environment', PK='Primary
-Key')
-listarTerminos(DBMS='Database Management
-System')
+    for clave, valor in KWARGS.items():
+        print(f'{clave}: {valor}')
+listarTerminos(IDE='Integrated Developement Environment', PK='Primary Key')
+listarTerminos(DBMS='Database Management System')
 #---------------------------------------
+
 def mi_funcion(nombre, apellido):
-print('saludos desde mi función')
-print(f'Nombre: {nombre}, Apellido:
-{apellido}')
-# Sería como imprimir así:
-print('Nombre:', nombre, 'Apellido:',
-apellido)
+    print('saludos desde mi función')
+    print(f'Nombre: {nombre} Apellido: {apellido}')
 mi_funcion('Juan', 'Perez')
 mi_funcion('Karla','Lara')
+
+# Sería como imprimir así:
+def mi_funcion(nombre, apellido):
+    print('Nombre:', nombre, 'Apellido:', apellido)
+mi_funcion('Juan', 'Perez')
+mi_funcion('Karla','Lara')
+# Diferencia clave: La función 1 utiliza f-strings (cadenas f) para formatear la salida, mientras que la función 2 utiliza la función print con múltiples argumentos separados por comas.
 #---------------------------------------
+
 # RETURN
 #---------------------------------------
-IBM SkillsBuild | Introducción a Python
-16
-#function definiciones de function no
-pueden estar vacías, pero si por alguna
-razón tiene
-# una definición de function sin
-contenido, ingrese la instrucción pass
-para evitar un error.
+#function definiciones de function no pueden estar vacías, pero si por alguna razón tiene
+# una definición de function sin contenido, ingrese la instrucción "pass" para evitar un error.
 def myfunction():
-pass
+    pass
 #---------------------------------------
+
 def sumar(a, b):
-return a + b
+    return a + b
 resultado = sumar(5, 3)
 print(f'Resultado sumar: {resultado}')
 # print(f'Resultado sumar: {sumar(5,3}')
-#También podíamos haber llamado a la
-función dentro de nuestro método print
+#También podíamos haber llamado a la función dentro de nuestro método print
+def sumar(a, b):
+    return a + b
 print(f'Resultado sumar: {sumar(5,3)}')
 # ---------------------------
-# función con múltiples parámetros con
-una sentencia de retorno
+
+# función con múltiples parámetros con una sentencia de retorno
 def multiplica(val1, val2):
-return val1 * val2
-multiplica(3, 5) # muestra 15 en la
-consola
+    return val1 * val2
+multiplica(3, 5) # muestra 15 en la consola
+print(f'Resultado multiplicar: {multiplica(3,5)}')
 #---------------------------------------
 # esta es una función básica de suma
 def suma(a, b):
-return a + b
+    return a + b
 result = suma(1, 2)
+print (suma(1, 2))
 # result = 3
 #---------------------------------------
 # VALORES POR DEFECTO
 #---------------------------------------
-# esta es una función básica de suma con
-balores predeterminados
+# esta es una función básica de suma con valores predeterminados
 def suma(a, b=3):
-return a + b
+    return a + b
 result = suma(1)
 # result = 4
 #---------------------------------------
-# Indicio de qué tipo de dato vamos a
-manejar:
+
+# Indicio de qué tipo de dato vamos a manejar:
 #---------------------------------------
 def sumar(a:int = 0, b:int = 0) -> int:
-#def sumar(a = 0, b = 0):
-return a + b
+# def sumar(a = 0, b = 0):
+    return a + b
 resultado = sumar()
 #print(f'Resultado sumar: {resultado}')
-print(f'Resultado sumar: {sumar(45,
-654)}')
-#uanque le hemos dicho el tipo de los
-parámetros no estamos obligados a
-cumplirlo.
-print(f'Resultado sumar: {sumar("aNGEL",
-"Garcia")}')
+print(f'Resultado sumar: {sumar(45, 654)}')
+#Aunque le hemos dicho el tipo de los parámetros no estamos obligados a cumplirlo.
+print(f'Resultado sumar: {sumar("aNGEL", "Garcia")}')
 #---------------------------------------
 """
-Crear una función para sumar los valores
-recibidos de tipo numérico,
-utilizando argumentos variables *args
-como parámetro de la función
-y regresar como resultado la suma de
-todos los valores pasados como
-argumentos.
+Crear una función para sumar los valores recibidos de tipo numérico, utilizando argumentos variables *args como parámetro de la función y regresar como resultado la suma de todos los valores pasados como argumentos.
 """
-# Definimos nuestra funcion para sumar
-valores
+# Definimos nuestra funcion para sumar valores
 def sumar_valores(*args):
-resultado = 0
+    resultado = 0
 # Iteramos cada elemento
-for valor in args:
+    for valor in args:
 # resultado = resultado + valor
-resultado += valor
-return resultado
-IBM SkillsBuild | Introducción a Python
-17
+        resultado += valor
+    return resultado
 # Llamada a la funcion
-print(sumar_valores(3, 5, 9, 4, 6, 45,
-444))
+print(sumar_valores(3, 5, 9, 4, 6, 45, 444))
 #---------------------------------------
-# Distintos tipos de datos como
-argumentos en Python
+
+# Distintos tipos de datos como argumentos en Python
 def desplegarNombres(nombres):
-for nombre in nombres:
-print(nombre)
+    for nombre in nombres:
+        print(nombre)
 #nombres = ['Juan', 'Karla', 'Guillermo']
 #desplegarNombres(nombres)
 #desplegarNombres('Carlos')
@@ -238,115 +224,94 @@ desplegarNombres([10, 11])
 # 5! = 5 * 24
 # 5! = 120
 def factorial(numero):
-if numero == 1:
-return 1
-else:
-return numero * factorial(numero-
-1)
+    if numero == 1:
+        return 1
+    else:
+        return numero * factorial(numero- 1)
 numero = 6
 resultado = factorial(numero)
-print(f'El factorial de {numero} es
-{resultado}')
+print(f'El factorial de {numero} es {resultado}')
 #---------------------------------------
 """
-Imprimir numeros de 5 a 1 de manera
-descendente usando funciones recursivas.
-Puede ser cualquier valor positivo,
-ejemplo, si pasamos el valor de 5, debe
-imprimir:
+Imprimir numeros de 5 a 1 de manera descendente usando funciones recursivas.
+Puede ser cualquier valor positivo, ejemplo, si pasamos el valor de 5, debe imprimir:
 5
 4
 3
 2
 1
-En caso de pasar el valor de 3, debe
-imprimir:
+En caso de pasar el valor de 3, debe imprimir:
 3
 2
 1
-Si se pasan valores negativos no imprime
-nada
+Si se pasan valores negativos no imprime nada
 """
 def imprimir_numero_recursivo(numero):
-if numero >= 1:
-print(numero)
-imprimir_numero_recursivo(numero
-- 1)
-elif numero == 0:
-return
-elif numero < 0:
-print('Valor incorrecto...')
-imprimir_numero_recursivo(5000000)
+    if numero >= 1:
+        print(numero)
+        imprimir_numero_recursivo(numero - 1)
+    elif numero == 0:
+        return
+    elif numero < 0:
+        print('Valor incorrecto...')
+imprimir_numero_recursivo(5000000) # Excede el límite de Python
 #---------------------------------------
+def imprimir_numero_recursivo(numero):
+    if numero >= 1:
+        print(numero)
+        imprimir_numero_recursivo(numero - 1)
+    elif numero == 0:
+        return
+    elif numero < 0:
+        print('Valor incorrecto...')
+imprimir_numero_recursivo(8)
+#--------------------------------------
+
 def cuenta_regresiva(numero):
-numero -= 1
-if numero > 0:
-print (numero)
-cuenta_regresiva(numero)
-else:
-print ("Boooooooom!")
-print ("Fin de la función"),
-numero
+    numero -= 1
+    if numero > 0:
+        print (numero)
+        cuenta_regresiva(numero)
+    else:
+        print ("Boooooooom!")
+        print ("Fin de la función"), numero
 cuenta_regresiva(5)
 #---------------------------------------
 """
 Ejercicio: Calculadora de Impuestos
-Crear una función para calcular el total
-de un pago incluyendo un impuesto
-aplicado.
-# Formula: pago_total = pago_sin_impuesto
-+ pago_sin_impuesto * (impuesto/100)
+Crear una función para calcular el total de un pago incluyendo un impuesto aplicado.
+# Formula: pago_total = pago_sin_impuesto + pago_sin_impuesto * (impuesto/100)
 """
-IBM SkillsBuild | Introducción a Python
-18
-# Funcion que calcula el total de un pago
-incluyendo el impuesto
-def
-calcular_total_pago(pago_sin_impuesto,
-impuesto):
-pago_total = pago_sin_impuesto +
-pago_sin_impuesto * (impuesto/100)
-return pago_total
-# Ejecutamos la funcion
-pago_sin_impuesto =
-float(input('Proporcione el pago sin
-impuestos: '))
-impuesto = float(input('Proporcione el
-monto del impuesto:'))
-pago_con_impuesto =
-calcular_total_pago(pago_sin_impuesto,
-impuesto)
-print(f'Pago con impuesto:
-{pago_con_impuesto}')
+# Funcion que calcula el total de un pago incluyendo el impuesto
+# Función que calcula el total de un pago incluyendo el impuesto
+def calcular_total_pago(pago_sin_impuesto, impuesto):
+    pago_total = pago_sin_impuesto + pago_sin_impuesto * (impuesto / 100)
+    return pago_total
+
+# Ejecutamos la función
+pago_sin_impuesto = float(input('Proporcione el pago sin impuestos: '))
+impuesto = float(input('Proporcione el monto del impuesto: '))
+pago_con_impuesto = calcular_total_pago(pago_sin_impuesto, impuesto)
+print(f'Pago con impuesto: {pago_con_impuesto}')
 #---------------------------------------
 #---------------------------------------
 """
 Ejercicio: Convertidor de Temperatura
-Realizar dos funciones para convertir de
-grados celsius a fahrenheit y viceversa.
+Realizar dos funciones para convertir de grados celsius a fahrenheit y viceversa.
 """
-# Funcion que convierte de celsius a
-fahrenheit
+# Funcion que convierte de celsius a fahrenheit
 def celsius_fahrenheit(celsius):
-return celsius * 9 / 5 + 32
-# Funcion que convierte de fahrenheit a
-celsius
+    return celsius * 9 / 5 + 32
+# Funcion que convierte de fahrenheit a celsius
 def fahrenheit_celsius(fahrenheit):
-return (fahrenheit - 32) * 5 / 9
-# Realizamos algunas pruebas de
-conversion
-celsius = float(input('Proporcione su
-valor en celsius: '))
+    return (fahrenheit - 32) * 5 / 9
+# Realizamos algunas pruebas de conversion
+celsius = float(input('Proporcione su valor en celsius: '))
 resultado = celsius_fahrenheit(celsius)
 # Imprimimos el resultado
-print(f'{celsius} C a F:
-{resultado:.2f}')
-# Realizamos la prueba de grados
-fahrenheit a celsius
-fahrenheit = float(input('Proporcione su
-valor en fahrenheit: '))
-resultado =
-fahrenheit_celsius(fahrenheit)
+print(f'{celsius} C a F: {resultado:.2f}')
+# Realizamos la prueba de grados fahrenheit a celsius
+fahrenheit = float(input('Proporcione su valor en fahrenheit: '))
+resultado = fahrenheit_celsius(fahrenheit)
 # Imprimimos el resultado
-print(f'{fahrenheit} F a C:
-{resultado:0.2f}')
+print(f'{fahrenheit} F a C: {resultado:0.2f}')
