@@ -53,6 +53,18 @@ diccionario = {1:"desordenada", 2:"mutable", 3:"claves no duplicables", 4:"Index
    - Acceso por clave: Puedes acceder a los valores de un diccionario utilizando sus claves correspondientes.  
    - Son estructuras de datos que nos permiten almacenar valores de diferente tipo (números, strings, etc) e incluso listas y otros diccionarios.  
 
+5. Bytes <bytes>  
+   - Sintáxis b'<cadena de bytes>'  
+   - Ubicación de memoria de 8 bits.  
+   - Es una secuencia inmutable de bytes, conceptualmente similar a un string. Si necesitas modificar una secuencia de bytes, debes usar bytearray.  
+   - Contiene enteros: Los elementos de un objeto bytes son enteros en el rango de 0 a 255 (inclusive). Cada entero representa un byte individual.  
+   - Representación de datos binarios: Los objetos bytes se utilizan comúnmente para representar datos binarios, como datos de archivos, datos de red o datos de protocolos de comunicación.  
+   - Creación: Se pueden crear objetos bytes utilizando el prefijo b antes de una cadena literal (por ejemplo, b'hola') o utilizando la función bytes():  
+   - Los objetos bytes a menudo se utilizan junto con la codificación y decodificación de caracteres. El método .decode() se utiliza para convertir un objeto bytes en una cadena (str), y el método .encode() se utiliza para convertir una cadena en un objeto bytes.  
+   - Diferencias clave con las cadenas (str):  
+     - Mientras que las cadenas representan secuencias de caracteres Unicode, los objetos bytes representan secuencias de bytes.  
+     - Las cadenas son para texto, los bytes son para datos binarios.  
+
 # Métodos de las listas [list]
 
 | Método | Descripción |
