@@ -1,3 +1,4 @@
+# Algoritmos de Búsqueda Binaria
 '''
 Ejemplo Algoritmo Logarítmico O(log x): Búsqueda binaria
 Estos algoritmos indican que el tiempo es menor que el tamaño de los datos de entrada. No importa indicar la base del logaritmo.
@@ -50,3 +51,51 @@ print(f"El elemento {elemento_buscado} se encuentra en el índice {indice}")
 
 # Resultado: El elemento 23 se encuentra en el índice 5
 
+'''
+Imaginemos tener que desarrollar una función de búsqueda de estudiantes de para que sea posible loguearse en un sitio web
+'''
+def busqueda_binaria(lista, nombre_buscado):
+    """
+    Realiza una búsqueda binaria en una lista ordenada.
+
+    Args:
+        lista: La lista ordenada en la que buscar.
+        nombre_buscado: El nombre a buscar.
+
+    Returns:
+        El índice del nombre si se encuentra, o -1 si no.
+    """
+    inicio = 0  # Índice del primer elemento
+    fin = len(lista) - 1  # Índice del último elemento
+
+    while inicio <= fin:
+        medio = (inicio + fin) // 2  # Calcula el índice medio
+
+        if lista[medio] == nombre_buscado:
+            return medio  # Se encontró el nombre
+        elif lista[medio] < nombre_buscado:
+            inicio = medio + 1  # Busca en la mitad derecha
+        else:
+            fin = medio - 1  # Busca en la mitad izquierda
+
+    return -1  # El nombre no se encontró
+
+def importar_lista(archivo):
+    lista = []
+    with open(archivo, 'r') as tf:
+        lines = tf.read().split('","')
+        for line in lines:
+            lista.append(line)
+    return lista
+
+def main():
+    lista_de_alumnos = sorted(importar_lista('../data/lista_alumnos')) #Ordenamos la lista.
+    for i in range(0, 3500):
+        posicion_del_alumno = busqueda_binaria(lista_de_alumnos, "Zoraida")
+        if posicion_del_alumno != -1:
+            print(f"Alumno(a) {lista_de_alumnos[posicion_del_alumno]} está en la posición {posicion_del_alumno}")
+        else:
+            print("Alumno no encontrado")
+
+if __name__ == "__main__":
+    main()

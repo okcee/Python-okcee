@@ -57,3 +57,44 @@ Que significa complejidad en el peor caso. Se escribe como “O” pero en reali
 ### Comparación de Complejidades:
 - Muestra cómo el tiempo de ejecución aumenta drásticamente con la complejidad del algoritmo, especialmente con grandes conjuntos de datos.  
 - La notación Big O, es una herramienta muy útil para poder elegir entre algoritmos que realizan la misma tarea, para que en el momento en que se trabaje con grandes cantidades de datos, el programa no se ralentice.  
+
+# Análisis asintótico
+El análisis asintótico nos permite comprender y comparar la eficiencia de los algoritmos a medida que el tamaño de la entrada aumenta. Al centrarnos en el orden de crecimiento, podemos predecir cómo se comportarán los algoritmos en situaciones del mundo real y tomar decisiones informadas sobre qué algoritmos son más adecuados para cada tarea.  
+**¿Por qué es importante?**
+- Escalabilidad: Nos permite predecir cómo se comportará un algoritmo cuando se enfrenta a grandes cantidades de datos. Esto es crucial en aplicaciones que manejan grandes volúmenes de información.  
+- Comparación de algoritmos: Nos proporciona una forma de comparar la eficiencia de diferentes algoritmos, incluso si se implementan en diferentes lenguajes de programación o en diferentes computadoras.  
+- Optimización: Nos ayuda a identificar los cuellos de botella en un algoritmo y a determinar dónde se pueden realizar mejoras para que sea más eficiente.  
+
+Las notaciones son fundamentales para entender la eficiencia de los algoritmos.  
+
+## Hay principalmente tres notaciones asintóticas:
+
+1. **Notación Theta (Θ): Límite Exacto**  
+La notación Theta (Θ) define un límite ajustado para el tiempo de ejecución de un algoritmo. En otras palabras, proporciona tanto un límite superior como un límite inferior.  
+Cuando decimos que un algoritmo tiene una complejidad Θ(g(n)), significa que su tiempo de ejecución crecerá a la misma velocidad que g(n), tanto en el mejor como en el peor de los casos.  
+Significado: Es la notación más precisa, ya que describe el comportamiento exacto del algoritmo a medida que el tamaño de la entrada aumenta.  
+Ejemplo:  
+Si un algoritmo siempre realiza una cantidad de operaciones proporcional a n², entonces su complejidad sería Θ(n²).  
+
+2. **Notación Omega (Ω): Límite Inferior**  
+La notación Omega (Ω) define un límite inferior para el tiempo de ejecución de un algoritmo.  
+Cuando decimos que un algoritmo tiene una complejidad Ω(g(n)), significa que su tiempo de ejecución siempre será al menos tan grande como g(n), en el mejor de los casos.  
+Significado: Nos proporciona una garantía sobre el mejor rendimiento posible del algoritmo.  
+Ejemplo:  
+Un algoritmo de búsqueda que, en el mejor de los casos, encuentra el elemento buscado en el primer paso, tendría una complejidad Ω(1).  
+
+3. **Notación Big-O (O): Límite Superior**
+La notación Big-O (O) define un límite superior para el tiempo de ejecución de un algoritmo.  
+Cuando decimos que un algoritmo tiene una complejidad O(g(n)), significa que su tiempo de ejecución nunca será mayor que g(n), en el peor de los casos.  
+Significado: Es la notación más utilizada, ya que nos proporciona una garantía sobre el peor rendimiento posible del algoritmo.  
+Ejemplo:  
+Un algoritmo de ordenamiento que, en el peor de los casos, realiza una cantidad de operaciones proporcional a n², tendría una complejidad O(n²).  
+
+## Puntos Clave
+Relación entre las notaciones:  
+- Si un algoritmo tiene una complejidad Θ(g(n)), entonces también tiene una complejidad O(g(n)) y Ω(g(n)).  
+- La notación Big-O es la más común porque es muy util el conocer el peor de los casos de un algoritmo.  
+
+Importancia práctica:  
+- Estas notaciones nos permiten comparar la eficiencia de diferentes algoritmos y elegir el más adecuado para una tarea específica.  
+- Son fundamentales para el diseño y análisis de algoritmos eficientes, especialmente cuando se trabaja con grandes conjuntos de datos.  
