@@ -1,8 +1,11 @@
-## Función Zip
+## Función Zip o de cremallera
 
-La función zip() en Python es una herramienta muy útil para combinar múltiples iterables (como listas, tuplas o diccionarios) en un solo iterador. Aquí te explico cómo funciona y sus usos principales:
+La función zip() en Python es una herramienta muy útil para combinar múltiples iterables (como listas, tuplas o diccionarios) en un solo iterador.  
 
 ## ¿Qué hace *zip()*?
+
+La función zip() en Python une dos listas separadas en una lista de pares. Convierte el objeto a tipo zip y, tenemos que convertirlo a lista si queremos ver los elementos de la cremallera.    
+
 ### Combinación de iterables:
 zip() toma uno o más iterables como argumentos y devuelve un iterador de tuplas.  
 Cada tupla en el iterador contiene los elementos correspondientes de los iterables de entrada. Es decir, la primera tupla contiene el primer elemento de cada iterable, la segunda tupla contiene el segundo elemento de cada iterable, y así sucesivamente.  

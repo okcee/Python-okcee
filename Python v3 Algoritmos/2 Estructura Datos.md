@@ -52,6 +52,9 @@ diccionario = {1:"desordenada", 2:"mutable", 3:"claves no duplicables", 4:"Index
    - Claves inmutables: Las claves de un diccionario deben ser objetos inmutables, como cadenas, números o tuplas. Los valores pueden ser de cualquier tipo.  
    - Acceso por clave: Puedes acceder a los valores de un diccionario utilizando sus claves correspondientes.  
    - Son estructuras de datos que nos permiten almacenar valores de diferente tipo (números, strings, etc) e incluso listas y otros diccionarios.  
+   - Es posible usar el *Constructor dict(clave="valor, ")* para crear un nuevo diccionario.  
+   - print(miDiccionario.keys()) -->  Me imprime las claves.  
+   - print(miDiccionario.values()) -->  Me imprime el valor de las claves.  
 
 5. Bytes <bytes>  
    - Sintáxis b'<cadena de bytes>'  
