@@ -1,3 +1,4 @@
+**print()**  
 print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
 * objects: Son los objetos que se desean imprimir. Pueden ser uno o varios objetos separados por comas.
   * Permite imprimir cualquier tipo de objeto: cadenas, números, listas, diccionarios, etc.
@@ -9,15 +10,17 @@ print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
     * Conjuntos (sets): mi_conjunto = {1, 2, 3, 4, 5} --> print(mi_conjunto)
     * Variables: nombre = "PyMentor" --> edad = 0
     * Diferentes tipos de objetos: 
-      * nombre = "PyMentor"
-        edad = 0
-        lista_cursos = ["Python básico", "Python intermedio"]
-        print("Nombre:", nombre, "Edad:", edad, "Cursos:", lista_cursos)
-    * Incluir marcadores de posición o variables dentro de una cadena de texto { f-strings (cadenas f).}:
-      * f"cadena de texto {expresión}":
+      * ```python
         nombre = "PyMentor"
         edad = 0
-        print(f"El nombre es {nombre} y la edad es {edad}.")
+        lista_cursos = ["Python básico", "Python intermedio"]
+        print("Nombre:", nombre, "Edad:", edad, "Cursos:", lista_cursos)```
+    * Incluir marcadores de posición o variables dentro de una cadena de texto { f-strings (cadenas f).}:
+      * ```python
+        f"cadena de texto {expresión}":
+        nombre = "PyMentor"
+        edad = 0
+        print(f"El nombre es {nombre} y la edad es {edad}.")```
 
 print("El nombre es:", nombre, "y la edad es:", edad)
   * Si se pasan varios objetos, se imprimen en el orden en que se proporcionan.
@@ -26,6 +29,12 @@ print("El nombre es:", nombre, "y la edad es:", edad)
 * file=sys.stdout: Es el objeto donde se escribe la salida. Por defecto, es la salida estándar (la consola).
 * flush=False: Indica si se fuerza el vaciado del buffer de salida.
 
+**input()**  
 input([prompt]) --> input("Por favor, ingresa tu edad: ")
-
+```python
+variable = tipo_de_dato(input("Mensaje opcional: "))
+```
+* variable: El nombre de la variable donde se almacenará el valor convertido.
+* tipo_de_dato: El tipo de dato al que deseas convertir la entrada (por ejemplo, int, float).
+* input("Mensaje opcional: "): La función input() que solicita la entrada del usuario. El "Mensaje opcional" es un texto que se muestra al usuario antes de que ingrese su dato.
 
