@@ -21,3 +21,20 @@ print(f_var)
 '''Ejercicio 5
 Escribir un programa que pregunte al usuario por el número de horas trabajadas y el coste por hora. Después debe mostrar por pantalla la paga que le corresponde.'''
 
+i_horas=int(input("¿Cuántas horas as trabajado? "))
+f_coste=float(input("¿Cuánto es salario acordado por hora trabajada? "))
+f_paga=i_horas*f_coste
+print=(f"La paga que corresponde es igual a {f_paga}")
+
+'''Ejercicio 6
+Escribir un programa que lea un entero positivo, "n" , introducido por el usuario y después muestre en pantalla la suma de todos los enteros desde 1 hasta "n". La suma de los "n"  primeros enteros positivos puede ser calculada de la siguiente forma:
+suma = n(n+1) / 2
+'''
+
+try:
+    numero = int(input("Introduce un número entero: "))
+    print("El número introducido es:", numero)
+    suma = (numero*(numero+1))/2
+    print("La suma de los números primeros enteros es:", numero)
+except ValueError:
+    print("Error: Debes introducir un número entero válido.")
