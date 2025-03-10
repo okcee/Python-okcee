@@ -3,6 +3,7 @@ Iniciamos la terminal en el directorio raíz que deseemos crear el entorno virtu
 
 - Creamos el entorno.
 python -m venv env
+py -m venv env
 
 - Activamos el entorno.
 source env/scripts/activate
